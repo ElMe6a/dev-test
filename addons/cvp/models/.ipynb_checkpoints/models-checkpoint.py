@@ -18,7 +18,7 @@ from odoo import models, fields, api
  #           record.value2 = float(record.value) / 100
                 
 class peliculas(models.Model):
-    _name = 'cvp.cvp_peliculas'
+    _name = 'cvp.peliculas'
     
     imagen = fields.Binary(string = 'Imagen', required = True)
     titulo = fields.Char(string = 'Titulo de la pelicula', required = True)
@@ -33,8 +33,8 @@ class peliculas(models.Model):
     total = fields.Float('Total', compute = '_get_total')
     
     #relacion de la tabla
-    genero_ids = fields.Many2many('cvp.cvp_generos', string = 'generos')
-    studio_id = fields.Many2one('cvp.cvp_studio', string = 'studios')
+    genero_ids = fields.Many2many('cvp.generos', string = 'generos')
+    studio_id = fields.Many2one('cvp.studio', string = 'studios')
     
     #para computar el total pero falta cambio
     @api.depends('costo_pelicula', 'iva')
@@ -42,8 +42,8 @@ class peliculas(models.Model):
         for peliculas self:
         peliculas.total = 0
   
-class generos(models.Model)
-    _name = 'cvp.cvp_generos'
+ class generos(models.Model)
+    _name = 'cvp.generos'
     
     nombre_genero = fields.Char(string = 'Genero',required = True)
     descripcion = fields.Text(string = 'Descripcion', required = True)
@@ -51,7 +51,7 @@ class generos(models.Model)
     pelicula_ids = fields.Many2many('cvp.peliculas', 'genero_ids', string = 'pelicula')
     
 class studio(models.Model)
-    _name = 'cvp.cvp_studio'
+    _name = 'cvp.studio'
 
     nombre_studio = fields.Char(string = 'Nombre del Studio', required = True)
     #relaciones entre tablas
