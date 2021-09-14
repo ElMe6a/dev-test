@@ -3,14 +3,14 @@
     'name': "cvp",
 
     'summary': """
-        Ejercicio 3
-        """,
+        Short (1 phrase/line) summary of the module's purpose, used as
+        subtitle on modules listing or apps.openerp.com""",
 
     'description': """
-        módulo en el cual se registran películas para comprar películas y vender peliculas
+        Long description of module's purpose
     """,
 
-    'author': "Michael",
+    'author': "My Company",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
@@ -20,11 +20,11 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'sale_management', 'contacts', 'purchase'],
+    'depends': ['base'],
 
     # always loaded
     'data': [
-        'security/ir.model.access.csv',
+        # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
     ],
@@ -32,7 +32,4 @@
     'demo': [
         'demo/demo.xml',
     ],
-    
-    #INDICAMOS QUE ES UNA APLICACION
-    'application' = True
 }
