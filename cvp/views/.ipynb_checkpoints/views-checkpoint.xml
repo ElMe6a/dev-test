@@ -1,7 +1,7 @@
 <odoo>
   <data>
     <!-- explicit list view definition -->
-
+<!--
     <record model="ir.ui.view" id="cvp.list">
       <field name="name">CVP list</field>
       <field name="model">cvp.cvp</field>
@@ -13,14 +13,16 @@
         </tree>
       </field>
     </record>
+-->
 
     <!-- actions opening views on models -->
-
+<!--
     <record model="ir.actions.act_window" id="cvp.action_window">
       <field name="name">CVP window</field>
       <field name="res_model">cvp.cvp</field>
       <field name="view_mode">tree,form</field>
     </record>
+-->
 
     <!-- server action to the one above -->
 <!--
