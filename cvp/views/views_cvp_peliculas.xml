@@ -2,9 +2,9 @@
   <data>
     <!-- explicit list view definition -->
     
-    <record model="ir.ui.view" id="cvp_peliculas_tree_view">
+    <record model="ir.ui.view" id="cvp.cvp_peliculas_tree_view">
       <field name="name">CVP_Peliculas lista</field>
-      <field name="model">model_cvp_peliculas</field>
+      <field name="model">cvp.cvp_peliculas</field>
       <field name="arch" type="xml">
         <tree>
           <field name="titulo"/>
@@ -14,9 +14,9 @@
       </field>
     </record>
       
-      <record model="ir.ui.view" id="cvp_peliculas_form_view">
+      <record model="ir.ui.view" id="cvp.cvp_peliculas_form_view">
       <field name="name">CVP_Peliculas forma</field>
-      <field name="model">model_cvp_peliculas</field>
+      <field name="model">cvp.cvp_peliculas</field>
       <field name="arch" type="xml">
         <form>
           <field name="titulo"/>
@@ -28,11 +28,11 @@
 
     <!-- actions opening views on models -->
 
-    <record model="ir.actions.act_window" id="cvp_peliculas.action_window">
+    <record model="ir.actions.act_window" id="cvp.action_window">
       <field name="name">CVP_Peliculas window</field>
       <field name="res_model">cvp.cvp_peliculas</field>
-      <field name="view_mode">tree,form</field>
-      <field name="view_id" ref= "cvp_peliculas_tree_view">
+      <field name="view_mode">tree, form</field>
+        <field name="view_id" ref= "cvp.cvp_peliculas_tree_view"> </field>
     </record>
 
     <!-- server action to the one above -->

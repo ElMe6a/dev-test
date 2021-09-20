@@ -1,0 +1,37 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    
+    <record model="ir.ui.view" id="cvp.cvp_generos_tree_view">
+      <field name="name">CVP_Generos lista</field>
+      <field name="model">cvp.cvp_generos</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombre"/>
+          <field name="descripcion"/>
+        </tree>
+      </field>
+    </record>
+      
+      <record model="ir.ui.view" id="cvp.cvp_generos_form_view">
+      <field name="name">CVP_Generos forma</field>
+      <field name="model">cvp.cvp_generos</field>
+      <field name="arch" type="xml">
+        <form>
+          <field name="nombre"/>
+          <field name="descripcion"/>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="cvp.action_window">
+      <field name="name">CVP_Generos window</field>
+      <field name="res_model">cvp.cvp_generos</field>
+      <field name="view_mode">tree, form</field>
+        <field name="view_id" ref= "cvp.cvp_generos_tree_view"> </field>
+    </record>
+
+  </data>
+</odoo>
