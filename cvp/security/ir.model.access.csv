@@ -1,4 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_cvp_cvp_peliculas,cvp.cvp_peliculas,model_cvp_cvp_peliculas,,1,1,1,1
 access_cvp_cvp_generos,cvp.cvp_generos,model_cvp_cvp_generos,,1,1,1,1
 access_cvp_cvp_studio,cvp.cvp_studio,model_cvp_cvp_studio,,1,1,1,1
+access_cvp_cvp_peliculas,cvp.cvp_peliculas,model_cvp_cvp_peliculas,,1,1,1,1
