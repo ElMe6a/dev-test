@@ -3,7 +3,7 @@
       
       <record model="ir.ui.view" id="cvp.list">
       <field name="name">cvp list</field>
-      <field name="model">cvp.cvp_peliculas</field>
+      <field name="model">cvp.peliculas</field>
       <field name="arch" type="xml">
         <tree>
           <field name="titulo"/>
@@ -15,7 +15,7 @@
       
     <record model="ir.actions.act_window" id="cvp.action_window">
       <field name="name">cvp window</field>
-      <field name="res_model">cvp.cvp_peliculas</field>
+      <field name="res_model">cvp.peliculas</field>
       <field name="view_mode">tree,form</field>
         <field name="view_id" ref="cvp.list"></field>
     </record>

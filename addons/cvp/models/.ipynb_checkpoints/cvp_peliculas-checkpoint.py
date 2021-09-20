@@ -6,12 +6,12 @@ class peliculas(models.Model):
     imagen = fields.Binary(string = 'Imagen', required = True)
     titulo = fields.Char(string = 'Titulo de la pelicula', required = True)
     fecha_lanzamiento = fields.Date(string = 'Fecha de lanzamiento')
-    longitud_minutos = fields.DateTime(strings = 'Minutos de la pelicula')
+    longitud_minutos = fields.Datetime(strings = 'Minutos de la pelicula')
     # director = fields.Many2one('res.users', required = True, string = 'Director')
     # actores = fields.Many2one('res.users', required = True, string = ' Actores')
     # producto_asociado = fields.Char(string = 'Producto') seria char o many2one?  
     sinopsis = fields.Text(string = 'Sinopsis', required = True)
-    costo_pelicula = fields.Float(string = 'Costo', (8,2), required = True)
+    costo_pelicula = fields.Float(string = 'Costo', required = True)
     iva = fields.Float(string = 'Iva',required = True)
     total = fields.Float('Total', compute = '_get_total')
     
