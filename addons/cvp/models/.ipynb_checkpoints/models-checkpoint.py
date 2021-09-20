@@ -42,17 +42,17 @@ class peliculas(models.Model):
         for peliculas self:
         peliculas.total = 0
   
- class generos(models.Model)
-    _name = 'cvp.generos'
-    
-    nombre_genero = fields.Char(string = 'Genero',required = True)
-    descripcion = fields.Text(string = 'Descripcion', required = True)
+ # class generos(models.Model)
+#    _name = 'cvp.generos'
+#    
+#    nombre_genero = fields.Char(string = 'Genero',required = True)
+#    descripcion = fields.Text(string = 'Descripcion', required = True)
     #relacion de la tabla
-    pelicula_ids = fields.Many2many('cvp.peliculas', 'genero_ids', string = 'pelicula')
+#    pelicula_ids = fields.Many2many('cvp.peliculas', 'genero_ids', string = 'pelicula')
     
-class studio(models.Model)
-    _name = 'cvp.studio'
+#class studio(models.Model)
+#    _name = 'cvp.studio'
 
-    nombre_studio = fields.Char(string = 'Nombre del Studio', required = True)
+#    nombre_studio = fields.Char(string = 'Nombre del Studio', required = True)
     #relaciones entre tablas
-    pelicula_id = fields.One2many('cvp.peliculas', 'studio_id' string = 'pelicula')
+#    pelicula_id = fields.One2many('cvp.peliculas', 'studio_id' string = 'pelicula')

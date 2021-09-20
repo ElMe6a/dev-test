@@ -24,9 +24,10 @@
 
     # always loaded
     'data': [
-        #'security/ir.model.access.csv',
-        'views/views.xml',
+        'security/ir.model.access.csv',
+        #'views/views.xml',
         'views/templates.xml',
+        'views/vista_peliculas.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
@@ -34,5 +35,5 @@
     ],
     
     #INDICAMOS QUE ES UNA APLICACION
-    'application' = True
+    #'application' = True
 }
