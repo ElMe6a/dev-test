@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','sale_management','purchase','contacts'],
 
     # always loaded
     'data': [
@@ -35,5 +35,5 @@
     ],
     
     #INDICAMOS QUE ES UNA APLICACION
-    #'application' = True
+    'application' = True
 }
