@@ -11,7 +11,7 @@ class Peliculas(models.Model):
     fecha_lanzamiento = fields.Date(string ='Fecha de Lanzamiento') #Falta el Constraint
     longuitud_minutos = fields.Datetime(string = 'Minutos de Pelicula')
     director_id = fields.Many2one('res.users' ,'cdirector_id', ondelete='cascade') # Relacion * - 1
-    actores_id = fields.One2many('res.users','cactores_id', string='actores/one2many')
+    actores_id = fields.One2many('res.users','cactores_id', ondelete='cascade')
     #actores_id = fields.One2many('res.users', 'cactores_id') # Relacion 1 - *
     #producto_asociado Crear una realcion *-1 a la tabla compras
     sinopsis = fields.Text(string = 'Sinopsis', required = True)
