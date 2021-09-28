@@ -1,6 +1,6 @@
 from odoo import models, fields, api
 
-class peliculas(models.Model):
+class Peliculas(models.Model):
     _name = 'cvp.peliculas'
     
     imagen = fields.Binary(string = 'Imagen', required = True)
@@ -16,8 +16,8 @@ class peliculas(models.Model):
     total = fields.Float('Total', compute = '_get_total')
     
     #relacion de la tabla
- #  genero_ids = fields.Many2many('cvp.generos', string = 'generos')
- #  studio_id = fields.Many2one('cvp.studio', string = 'studios')
+    genero_ids = fields.Many2many('cvp.generos', string = 'generos')
+    studio_id = fields.Many2one('cvp.studio', string = 'studios')
     
     #para computar el total pero falta cambio
  #   @api.depends('costo_pelicula', 'iva')
